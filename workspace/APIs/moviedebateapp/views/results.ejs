@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> MovieDebates </title>
+        <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
+">
+        <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+
+        <style type = "text/css">
+            h1{
+                text-align: center;
+                font-family: 'Anton', sans-serif;
+                font-size: 36pt;
+            }
+            
+            .navbar{
+                color: gray;
+                font-family: 'Anton', sans-serif;
+                font-size: 12pt;
+                background-color: #f5f5dc;
+            }
+            
+            body{
+                background: url("http://www.publicdomainpictures.net/pictures/30000/velka/film-background-1334067869u9d.jpg");
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            
+            .figure-caption{
+                color: white;
+                font-family: 'Anton', sans-serif;
+                text-align: center;
+                margin: 0 auto;
+            }
+            
+            .imdb{
+                padding-left: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-default fixed-top">
+          <div class="container">
+            <div class = "navbar-header">
+                <a class = "navbar-brand"> 
+                    <i class="fa fa-film" aria-hidden="true"> </i>
+                    MovieDebates
+                </a>
+            </div>
+          </div>
+        </nav>
+        
+        <div class = "container">
+            <header class = "jumbotron">
+                  <h1>Search Results:  </h1>  
+            </header> 
+            
+            <div class = "row">
+            <% var count = 0; allData.forEach(function(movie) { %>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4"> 
+                <figure class = "figure">
+                    <img class="figure-img img-fluid rounded" src = <%= movie["Poster"] %>>
+                    <figcaption class = "figure-caption text-center">  <p> <%= movie["Title"] %> <br />
+                    <img src = "http://www.billdamon.com/images/rottentomatoes/fresh.png" width = "10px" height = "10px"> <%= rottenTomatoes[count] %>      <img src = "https://vignette.wikia.nocookie.net/the-leftovers/images/7/7f/IMDB-icon.png/revision/latest?cb=20140627045053" width = "30px" height = "10px" class = "imdb"> <%= imdbScore[count] %> </p> </figcaption>
+                </figure>
+                    
+                </div>
+            <% count++;}) %>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+    </body>
+</html>
+
+

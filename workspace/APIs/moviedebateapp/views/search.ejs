@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Movie Debates</title>
+        <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
+">
+        <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+        <style type = "text/css">
+            body{
+                background: url("http://www.publicdomainpictures.net/pictures/30000/velka/film-background-1334067869u9d.jpg");
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            
+            h1{
+                font-family: 'Anton', sans-serif;
+                color: white;
+            }
+            
+            
+            
+            .navbar{
+                color: gray;
+                font-family: 'Anton', sans-serif;
+                font-size: 12pt;
+                background-color: #f5f5dc;
+            }
+            
+            
+            button{
+                font-family: 'Anton', sans-serif;
+            }
+            
+            .centered{
+                padding-top: 25%;
+                text-align: center;
+            }
+            
+        
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-default fixed-top">
+          <div class="container">
+            <div class = "navbar-header">
+                <a class = "navbar-brand"> 
+                    <i class="fa fa-film" aria-hidden="true"> </i>
+                    MovieDebates
+                </a>
+            </div>
+          </div>
+        </nav>
+        
+        <div class = "centered">
+            <h1>
+                Search for a movie! 
+            </h1>
+            
+            <form action = "/results" method = "GET">
+                <input type = "text" placeholder = "Movie Title" name = "search">
+                <button type = "submit" class = "btn btn-lg"> <i class = "fa fa-search"> </i> Search </button>
+            </form>    
+        </div>
+            
+           
+        
+    </body>
+</html>
+
